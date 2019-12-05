@@ -19,8 +19,10 @@ namespace Comprog2Project
             StartSplashScreen();
         }
 
-
-        private readonly Bitmap[] bitmaps = {Resources._587597, Resources._596398, Resources._596859, Resources._629544, Resources._727980, Resources._784987, Resources._849843, Resources._910148 };
+        //corousel hover collection of image path
+        private readonly Bitmap[] bitmaps = { Resources._587597, Resources._596398, Resources._596859, 
+                                              Resources._629544, Resources._727980, Resources._784987, 
+                                              Resources._849843, Resources._910148 };
         private int length = 0;
         //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -37,9 +39,9 @@ namespace Comprog2Project
 
         //---------------------------------------------------------------------------------------------------------------------------------------
 
-        private void CloseLbl_MouseHover(object sender, EventArgs e) => CloseLbl.ForeColor = System.Drawing.Color.Orange;
+        private void CloseLbl_MouseHover(object sender, EventArgs e) => ChangeColor.ForeColor((Label)sender,System.Drawing.Color.Orange);
 
-        private void CloseLbl_MouseLeave(object sender, EventArgs e) => CloseLbl.ForeColor = System.Drawing.Color.Maroon;
+        private void CloseLbl_MouseLeave(object sender, EventArgs e) => ChangeColor.ForeColor((Label)sender,System.Drawing.Color.Maroon);
 
         //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,49 +59,51 @@ namespace Comprog2Project
         }
 
         //----------------------------------------------------------------------------------------------------------------------------------------
-
-        private void SplashScreenShow() => Application.Run(new StartForm());
-        private void Dashboard() => Application.Run(new Dashboard());
-
+         //run the splash screen and abort in about 8sec
         private void StartSplashScreen() {
 
-            Thread thread = new Thread(new ThreadStart(SplashScreenShow));
+            Thread thread = new Thread(ThreaStart => Application.Run(new StartForm()));
             thread.Start();
             Thread.Sleep(8000);
             thread.Abort();
 
         }
-
+       //------------------------------------------------------------------------------------------------------------------------------------------
+        //validate the login credential 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             if (UsernameValue.Text == "admin" && PasswordValue.Text == "admin") {
 
-                Thread thread = new Thread(new ThreadStart(Dashboard));
+                Thread thread = new Thread(ThreadStart => Application.Run(new Dashboard()));
                 thread.Start();
                 this.Close();
             }
         }
-
+      //-----------------------------------------------------------------------------------------------------------------------------------------
+      //close the this form
         private void CancelBtn_Click(object sender, EventArgs e) => Close();
-
+      //-----------------------------------------------------------------------------------------------------------------------------------------
+        //hide and show text form of the password
         private void ShowHideChkbx_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckState.Checked == ShowHideChkbx.CheckState)
             {
                 PasswordValue.UseSystemPasswordChar = true;
-                ShowHideChkbx.Text = "Hide";
+                ShowHideChkbx.Text = "Show";
             }
             else
             {
                 PasswordValue.UseSystemPasswordChar = false;
-                ShowHideChkbx.Text = "Show";
+                ShowHideChkbx.Text = "Hide";
             }
         }
-
+     //----------------------------------------------------------------------------------------------------------------------------------------
         private void PasswordChoose(object sender, EventArgs e)
         {
-            PasswordValue.UseSystemPasswordChar = true;
-            PasswordValue.Clear();
+            var temp = (TextBox)sender;
+            temp.UseSystemPasswordChar = true;
+            temp.Clear();
         }
+    //--------------------------------------------------------------------------------------------------------------------------------------------
     }
 }

@@ -19,7 +19,7 @@ namespace Comprog2Project
 
         private readonly Point point = new Point(Cursor.Position.X, Cursor.Position.Y);   //get the location of the cursor of the mouse
         private void HoverOverPanel(object sender, EventArgs e) => this.Location = point;  //set the location of this form near the cursor of the mouse
-
+        private void DisposeResource(object sender, EventArgs e) => this.Dispose(true);
 
     }
 }

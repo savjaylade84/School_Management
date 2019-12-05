@@ -16,7 +16,7 @@ namespace Comprog2Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SearchStudent());
+            Application.Run(new Dashboard());
         }
     }
 }

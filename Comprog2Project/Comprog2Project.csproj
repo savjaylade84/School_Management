@@ -52,29 +52,39 @@
     <Compile Include="ChangeColor.cs" />
     <Compile Include="ConnectionDb.cs" />
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnableControl.cs" />
     <Compile Include="HoverForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HoverForm.Designer.cs">
       <DependentUpon>HoverForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IAccount.cs" />
+    <Compile Include="IStudent.cs" />
+    <Compile Include="ITeacher.cs" />
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchStudent.cs">
+    <Compile Include="SearchAndFindFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchStudent.Designer.cs">
-      <DependentUpon>SearchStudent.cs</DependentUpon>
+    <Compile Include="SearchAndFindFrm.Designer.cs">
+      <DependentUpon>SearchAndFindFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashScFrm.cs">
       <SubType>Form</SubType>
@@ -84,6 +94,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Teacher.cs" />
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,8 +108,8 @@
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchStudent.resx">
-      <DependentUpon>SearchStudent.cs</DependentUpon>
+    <EmbeddedResource Include="SearchAndFindFrm.resx">
+      <DependentUpon>SearchAndFindFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScFrm.resx">
       <DependentUpon>SplashScFrm.cs</DependentUpon>
@@ -142,8 +157,6 @@
     <None Include="Image\596398.jpg" />
     <None Include="Image\587597.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
