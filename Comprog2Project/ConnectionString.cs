@@ -14,6 +14,11 @@ namespace Comprog2Project
     /// </summary>
     class ConnectionString
     {
+        private static ConnectionString instance = new ConnectionString();
+        private ConnectionString(){ }
+
+        public ConnectionString getIntance() => instance;
+
 
         //get the connectionstring from app config
         internal static string ConnectionStrings { 

@@ -31,54 +31,51 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CloseLbl = new System.Windows.Forms.Label();
             this.SumOfAtndLBL = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.SideControlPanel = new System.Windows.Forms.Panel();
             this.AccTypeValue = new System.Windows.Forms.ComboBox();
+            this.profilepic = new System.Windows.Forms.PictureBox();
             this.CreateBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
-            this.DateValue = new System.Windows.Forms.TextBox();
             this.AccountNoValue = new System.Windows.Forms.TextBox();
-            this.profilepic = new System.Windows.Forms.PictureBox();
             this.MainInfoPanel = new System.Windows.Forms.Panel();
-            this.AccCredentialPanel = new System.Windows.Forms.Panel();
-            this.ACTitleLbl = new System.Windows.Forms.Label();
-            this.PwordValue = new System.Windows.Forms.TextBox();
-            this.UnameValue = new System.Windows.Forms.TextBox();
             this.PersonalInfoPanel = new System.Windows.Forms.Panel();
             this.PInfoTitleLbl = new System.Windows.Forms.Label();
             this.EmailTitleTxt = new System.Windows.Forms.TextBox();
             this.MnameTItleTxt = new System.Windows.Forms.TextBox();
-            this.bdateValue = new System.Windows.Forms.TextBox();
             this.ContactTitleTxt = new System.Windows.Forms.TextBox();
-            this.BDateTitleTxt = new System.Windows.Forms.TextBox();
             this.fnameTitleTxt = new System.Windows.Forms.TextBox();
-            this.addressValue = new System.Windows.Forms.TextBox();
             this.fnameValue = new System.Windows.Forms.TextBox();
-            this.AddressTitleTxt = new System.Windows.Forms.TextBox();
             this.mnameValue = new System.Windows.Forms.TextBox();
             this.contactValue = new System.Windows.Forms.TextBox();
             this.LnameTitleTxt = new System.Windows.Forms.TextBox();
             this.emailValue = new System.Windows.Forms.TextBox();
             this.lnameValue = new System.Windows.Forms.TextBox();
+            this.AccCredentialPanel = new System.Windows.Forms.Panel();
+            this.ShowHide = new System.Windows.Forms.CheckBox();
             this.deptValue = new System.Windows.Forms.TextBox();
             this.DeptTItleTxt = new System.Windows.Forms.TextBox();
+            this.ACTitleLbl = new System.Windows.Forms.Label();
+            this.PwordValue = new System.Windows.Forms.TextBox();
+            this.UnameValue = new System.Windows.Forms.TextBox();
+            this.PathHolder = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.SideControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             this.MainInfoPanel.SuspendLayout();
-            this.AccCredentialPanel.SuspendLayout();
             this.PersonalInfoPanel.SuspendLayout();
+            this.AccCredentialPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(34)))), ((int)(((byte)(38)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.CloseLbl);
             this.panel1.Controls.Add(this.SumOfAtndLBL);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 49);
+            this.panel1.Size = new System.Drawing.Size(815, 49);
             this.panel1.TabIndex = 47;
             // 
             // CloseLbl
@@ -88,7 +85,7 @@
             this.CloseLbl.Dock = System.Windows.Forms.DockStyle.Right;
             this.CloseLbl.Font = new System.Drawing.Font("Corbel", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CloseLbl.ForeColor = System.Drawing.Color.DarkRed;
-            this.CloseLbl.Location = new System.Drawing.Point(780, 0);
+            this.CloseLbl.Location = new System.Drawing.Point(779, 0);
             this.CloseLbl.Name = "CloseLbl";
             this.CloseLbl.Size = new System.Drawing.Size(34, 40);
             this.CloseLbl.TabIndex = 1;
@@ -110,22 +107,22 @@
             this.SumOfAtndLBL.TabIndex = 34;
             this.SumOfAtndLBL.Text = "Register";
             // 
-            // panel2
+            // SideControlPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(144)))), ((int)(((byte)(99)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.AccTypeValue);
-            this.panel2.Controls.Add(this.profilepic);
-            this.panel2.Controls.Add(this.CreateBtn);
-            this.panel2.Controls.Add(this.CancelBtn);
-            this.panel2.Controls.Add(this.DateValue);
-            this.panel2.Controls.Add(this.AccountNoValue);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 49);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(228, 544);
-            this.panel2.TabIndex = 49;
+            this.SideControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(144)))), ((int)(((byte)(99)))));
+            this.SideControlPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SideControlPanel.Controls.Add(this.PathHolder);
+            this.SideControlPanel.Controls.Add(this.AccTypeValue);
+            this.SideControlPanel.Controls.Add(this.profilepic);
+            this.SideControlPanel.Controls.Add(this.CreateBtn);
+            this.SideControlPanel.Controls.Add(this.CancelBtn);
+            this.SideControlPanel.Controls.Add(this.AccountNoValue);
+            this.SideControlPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideControlPanel.Location = new System.Drawing.Point(0, 49);
+            this.SideControlPanel.Name = "SideControlPanel";
+            this.SideControlPanel.Padding = new System.Windows.Forms.Padding(15);
+            this.SideControlPanel.Size = new System.Drawing.Size(228, 578);
+            this.SideControlPanel.TabIndex = 49;
             // 
             // AccTypeValue
             // 
@@ -136,71 +133,13 @@
             this.AccTypeValue.Items.AddRange(new object[] {
             "Student",
             "Teacher"});
-            this.AccTypeValue.Location = new System.Drawing.Point(12, 303);
+            this.AccTypeValue.Location = new System.Drawing.Point(12, 255);
             this.AccTypeValue.Name = "AccTypeValue";
             this.AccTypeValue.Size = new System.Drawing.Size(196, 31);
             this.AccTypeValue.Sorted = true;
             this.AccTypeValue.TabIndex = 60;
             this.AccTypeValue.Text = "(Account Type)";
             this.AccTypeValue.SelectedValueChanged += new System.EventHandler(this.AccountTypeSwitch);
-            // 
-            // CreateBtn
-            // 
-            this.CreateBtn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CreateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateBtn.Location = new System.Drawing.Point(15, 415);
-            this.CreateBtn.Name = "CreateBtn";
-            this.CreateBtn.Size = new System.Drawing.Size(193, 43);
-            this.CreateBtn.TabIndex = 50;
-            this.CreateBtn.Text = "Create";
-            this.CreateBtn.UseVisualStyleBackColor = false;
-            this.CreateBtn.MouseLeave += new System.EventHandler(this.ChangeColorMouseLeave);
-            this.CreateBtn.MouseHover += new System.EventHandler(this.ChangeColorMouseOver);
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelBtn.Location = new System.Drawing.Point(15, 473);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(193, 43);
-            this.CancelBtn.TabIndex = 51;
-            this.CancelBtn.Text = "Cancel";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.MouseLeave += new System.EventHandler(this.ChangeColorMouseLeave);
-            this.CancelBtn.MouseHover += new System.EventHandler(this.ChangeColorMouseOver);
-            // 
-            // DateValue
-            // 
-            this.DateValue.BackColor = System.Drawing.Color.LightGray;
-            this.DateValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DateValue.Enabled = false;
-            this.DateValue.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.DateValue.ForeColor = System.Drawing.Color.Black;
-            this.DateValue.Location = new System.Drawing.Point(15, 206);
-            this.DateValue.Margin = new System.Windows.Forms.Padding(8);
-            this.DateValue.Name = "DateValue";
-            this.DateValue.Size = new System.Drawing.Size(196, 31);
-            this.DateValue.TabIndex = 59;
-            this.DateValue.Text = "(Date)";
-            this.DateValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // AccountNoValue
-            // 
-            this.AccountNoValue.BackColor = System.Drawing.Color.LightGray;
-            this.AccountNoValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AccountNoValue.Enabled = false;
-            this.AccountNoValue.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.AccountNoValue.ForeColor = System.Drawing.Color.Black;
-            this.AccountNoValue.Location = new System.Drawing.Point(15, 253);
-            this.AccountNoValue.Margin = new System.Windows.Forms.Padding(8);
-            this.AccountNoValue.Name = "AccountNoValue";
-            this.AccountNoValue.Size = new System.Drawing.Size(196, 31);
-            this.AccountNoValue.TabIndex = 56;
-            this.AccountNoValue.Text = "(ID NO.)";
-            this.AccountNoValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // profilepic
             // 
@@ -215,8 +154,54 @@
             this.profilepic.TabIndex = 48;
             this.profilepic.TabStop = false;
             // 
+            // CreateBtn
+            // 
+            this.CreateBtn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CreateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateBtn.Location = new System.Drawing.Point(15, 415);
+            this.CreateBtn.Name = "CreateBtn";
+            this.CreateBtn.Size = new System.Drawing.Size(193, 43);
+            this.CreateBtn.TabIndex = 50;
+            this.CreateBtn.Text = "Create";
+            this.CreateBtn.UseVisualStyleBackColor = false;
+            this.CreateBtn.Click += new System.EventHandler(this.createAccount);
+            this.CreateBtn.MouseLeave += new System.EventHandler(this.ChangeColorMouseLeave);
+            this.CreateBtn.MouseHover += new System.EventHandler(this.ChangeColorMouseOver);
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelBtn.Location = new System.Drawing.Point(15, 473);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(193, 43);
+            this.CancelBtn.TabIndex = 51;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.LeaveForm);
+            this.CancelBtn.MouseLeave += new System.EventHandler(this.ChangeColorMouseLeave);
+            this.CancelBtn.MouseHover += new System.EventHandler(this.ChangeColorMouseOver);
+            // 
+            // AccountNoValue
+            // 
+            this.AccountNoValue.BackColor = System.Drawing.Color.LightGray;
+            this.AccountNoValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AccountNoValue.Enabled = false;
+            this.AccountNoValue.Font = new System.Drawing.Font("Cambria", 11.8F);
+            this.AccountNoValue.ForeColor = System.Drawing.Color.Black;
+            this.AccountNoValue.Location = new System.Drawing.Point(15, 205);
+            this.AccountNoValue.Margin = new System.Windows.Forms.Padding(8);
+            this.AccountNoValue.Name = "AccountNoValue";
+            this.AccountNoValue.Size = new System.Drawing.Size(196, 31);
+            this.AccountNoValue.TabIndex = 56;
+            this.AccountNoValue.Text = "(ID NO.)";
+            this.AccountNoValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // MainInfoPanel
             // 
+            this.MainInfoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(52)))), ((int)(((byte)(71)))));
             this.MainInfoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MainInfoPanel.Controls.Add(this.PersonalInfoPanel);
             this.MainInfoPanel.Controls.Add(this.AccCredentialPanel);
@@ -224,74 +209,17 @@
             this.MainInfoPanel.Location = new System.Drawing.Point(228, 49);
             this.MainInfoPanel.Name = "MainInfoPanel";
             this.MainInfoPanel.Padding = new System.Windows.Forms.Padding(15);
-            this.MainInfoPanel.Size = new System.Drawing.Size(588, 544);
+            this.MainInfoPanel.Size = new System.Drawing.Size(587, 578);
             this.MainInfoPanel.TabIndex = 78;
-            // 
-            // AccCredentialPanel
-            // 
-            this.AccCredentialPanel.Controls.Add(this.deptValue);
-            this.AccCredentialPanel.Controls.Add(this.DeptTItleTxt);
-            this.AccCredentialPanel.Controls.Add(this.ACTitleLbl);
-            this.AccCredentialPanel.Controls.Add(this.PwordValue);
-            this.AccCredentialPanel.Controls.Add(this.UnameValue);
-            this.AccCredentialPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AccCredentialPanel.Location = new System.Drawing.Point(15, 389);
-            this.AccCredentialPanel.Name = "AccCredentialPanel";
-            this.AccCredentialPanel.Size = new System.Drawing.Size(556, 138);
-            this.AccCredentialPanel.TabIndex = 78;
-            this.AccCredentialPanel.Visible = false;
-            // 
-            // ACTitleLbl
-            // 
-            this.ACTitleLbl.AutoSize = true;
-            this.ACTitleLbl.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ACTitleLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ACTitleLbl.Location = new System.Drawing.Point(172, 50);
-            this.ACTitleLbl.Name = "ACTitleLbl";
-            this.ACTitleLbl.Size = new System.Drawing.Size(222, 28);
-            this.ACTitleLbl.TabIndex = 90;
-            this.ACTitleLbl.Text = "Account Credential";
-            // 
-            // PwordValue
-            // 
-            this.PwordValue.BackColor = System.Drawing.Color.Gainsboro;
-            this.PwordValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PwordValue.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.PwordValue.ForeColor = System.Drawing.Color.Black;
-            this.PwordValue.Location = new System.Drawing.Point(289, 86);
-            this.PwordValue.Margin = new System.Windows.Forms.Padding(8);
-            this.PwordValue.Name = "PwordValue";
-            this.PwordValue.Size = new System.Drawing.Size(250, 31);
-            this.PwordValue.TabIndex = 89;
-            this.PwordValue.Text = "(Password)";
-            this.PwordValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // UnameValue
-            // 
-            this.UnameValue.BackColor = System.Drawing.Color.Gainsboro;
-            this.UnameValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UnameValue.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.UnameValue.ForeColor = System.Drawing.Color.Black;
-            this.UnameValue.Location = new System.Drawing.Point(23, 86);
-            this.UnameValue.Margin = new System.Windows.Forms.Padding(8);
-            this.UnameValue.Name = "UnameValue";
-            this.UnameValue.Size = new System.Drawing.Size(250, 31);
-            this.UnameValue.TabIndex = 88;
-            this.UnameValue.Text = "(Username)";
-            this.UnameValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PersonalInfoPanel
             // 
             this.PersonalInfoPanel.Controls.Add(this.PInfoTitleLbl);
             this.PersonalInfoPanel.Controls.Add(this.EmailTitleTxt);
             this.PersonalInfoPanel.Controls.Add(this.MnameTItleTxt);
-            this.PersonalInfoPanel.Controls.Add(this.bdateValue);
             this.PersonalInfoPanel.Controls.Add(this.ContactTitleTxt);
-            this.PersonalInfoPanel.Controls.Add(this.BDateTitleTxt);
             this.PersonalInfoPanel.Controls.Add(this.fnameTitleTxt);
-            this.PersonalInfoPanel.Controls.Add(this.addressValue);
             this.PersonalInfoPanel.Controls.Add(this.fnameValue);
-            this.PersonalInfoPanel.Controls.Add(this.AddressTitleTxt);
             this.PersonalInfoPanel.Controls.Add(this.mnameValue);
             this.PersonalInfoPanel.Controls.Add(this.contactValue);
             this.PersonalInfoPanel.Controls.Add(this.LnameTitleTxt);
@@ -300,7 +228,7 @@
             this.PersonalInfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PersonalInfoPanel.Location = new System.Drawing.Point(15, 15);
             this.PersonalInfoPanel.Name = "PersonalInfoPanel";
-            this.PersonalInfoPanel.Size = new System.Drawing.Size(556, 374);
+            this.PersonalInfoPanel.Size = new System.Drawing.Size(555, 316);
             this.PersonalInfoPanel.TabIndex = 79;
             // 
             // PInfoTitleLbl
@@ -321,7 +249,7 @@
             this.EmailTitleTxt.Enabled = false;
             this.EmailTitleTxt.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.EmailTitleTxt.ForeColor = System.Drawing.Color.Black;
-            this.EmailTitleTxt.Location = new System.Drawing.Point(22, 241);
+            this.EmailTitleTxt.Location = new System.Drawing.Point(22, 249);
             this.EmailTitleTxt.Margin = new System.Windows.Forms.Padding(8);
             this.EmailTitleTxt.Name = "EmailTitleTxt";
             this.EmailTitleTxt.Size = new System.Drawing.Size(142, 31);
@@ -336,28 +264,13 @@
             this.MnameTItleTxt.Enabled = false;
             this.MnameTItleTxt.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.MnameTItleTxt.ForeColor = System.Drawing.Color.Black;
-            this.MnameTItleTxt.Location = new System.Drawing.Point(22, 100);
+            this.MnameTItleTxt.Location = new System.Drawing.Point(22, 102);
             this.MnameTItleTxt.Margin = new System.Windows.Forms.Padding(8);
             this.MnameTItleTxt.Name = "MnameTItleTxt";
             this.MnameTItleTxt.Size = new System.Drawing.Size(142, 31);
             this.MnameTItleTxt.TabIndex = 83;
             this.MnameTItleTxt.Text = "(Middle Name)";
             this.MnameTItleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // bdateValue
-            // 
-            this.bdateValue.BackColor = System.Drawing.Color.Gainsboro;
-            this.bdateValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bdateValue.Enabled = false;
-            this.bdateValue.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.bdateValue.ForeColor = System.Drawing.Color.Black;
-            this.bdateValue.Location = new System.Drawing.Point(189, 335);
-            this.bdateValue.Margin = new System.Windows.Forms.Padding(8);
-            this.bdateValue.Name = "bdateValue";
-            this.bdateValue.Size = new System.Drawing.Size(349, 31);
-            this.bdateValue.TabIndex = 93;
-            this.bdateValue.Text = "(Birthdate)";
-            this.bdateValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ContactTitleTxt
             // 
@@ -366,28 +279,13 @@
             this.ContactTitleTxt.Enabled = false;
             this.ContactTitleTxt.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.ContactTitleTxt.ForeColor = System.Drawing.Color.Black;
-            this.ContactTitleTxt.Location = new System.Drawing.Point(22, 194);
+            this.ContactTitleTxt.Location = new System.Drawing.Point(22, 200);
             this.ContactTitleTxt.Margin = new System.Windows.Forms.Padding(8);
             this.ContactTitleTxt.Name = "ContactTitleTxt";
             this.ContactTitleTxt.Size = new System.Drawing.Size(142, 31);
             this.ContactTitleTxt.TabIndex = 78;
             this.ContactTitleTxt.Text = "(Contact)";
             this.ContactTitleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BDateTitleTxt
-            // 
-            this.BDateTitleTxt.BackColor = System.Drawing.Color.LightGray;
-            this.BDateTitleTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BDateTitleTxt.Enabled = false;
-            this.BDateTitleTxt.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.BDateTitleTxt.ForeColor = System.Drawing.Color.Black;
-            this.BDateTitleTxt.Location = new System.Drawing.Point(22, 335);
-            this.BDateTitleTxt.Margin = new System.Windows.Forms.Padding(8);
-            this.BDateTitleTxt.Name = "BDateTitleTxt";
-            this.BDateTitleTxt.Size = new System.Drawing.Size(142, 31);
-            this.BDateTitleTxt.TabIndex = 92;
-            this.BDateTitleTxt.Text = "(Birthdate)";
-            this.BDateTitleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fnameTitleTxt
             // 
@@ -404,21 +302,6 @@
             this.fnameTitleTxt.Text = "(First Name)";
             this.fnameTitleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // addressValue
-            // 
-            this.addressValue.BackColor = System.Drawing.Color.Gainsboro;
-            this.addressValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addressValue.Enabled = false;
-            this.addressValue.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.addressValue.ForeColor = System.Drawing.Color.Black;
-            this.addressValue.Location = new System.Drawing.Point(189, 288);
-            this.addressValue.Margin = new System.Windows.Forms.Padding(8);
-            this.addressValue.Name = "addressValue";
-            this.addressValue.Size = new System.Drawing.Size(349, 31);
-            this.addressValue.TabIndex = 91;
-            this.addressValue.Text = "(Address)";
-            this.addressValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // fnameValue
             // 
             this.fnameValue.BackColor = System.Drawing.Color.Gainsboro;
@@ -434,21 +317,6 @@
             this.fnameValue.Text = "(First Name)";
             this.fnameValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // AddressTitleTxt
-            // 
-            this.AddressTitleTxt.BackColor = System.Drawing.Color.LightGray;
-            this.AddressTitleTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddressTitleTxt.Enabled = false;
-            this.AddressTitleTxt.Font = new System.Drawing.Font("Cambria", 11.8F);
-            this.AddressTitleTxt.ForeColor = System.Drawing.Color.Black;
-            this.AddressTitleTxt.Location = new System.Drawing.Point(22, 288);
-            this.AddressTitleTxt.Margin = new System.Windows.Forms.Padding(8);
-            this.AddressTitleTxt.Name = "AddressTitleTxt";
-            this.AddressTitleTxt.Size = new System.Drawing.Size(142, 31);
-            this.AddressTitleTxt.TabIndex = 90;
-            this.AddressTitleTxt.Text = "(Address)";
-            this.AddressTitleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // mnameValue
             // 
             this.mnameValue.BackColor = System.Drawing.Color.Gainsboro;
@@ -456,7 +324,7 @@
             this.mnameValue.Enabled = false;
             this.mnameValue.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.mnameValue.ForeColor = System.Drawing.Color.Black;
-            this.mnameValue.Location = new System.Drawing.Point(189, 100);
+            this.mnameValue.Location = new System.Drawing.Point(189, 102);
             this.mnameValue.Margin = new System.Windows.Forms.Padding(8);
             this.mnameValue.Name = "mnameValue";
             this.mnameValue.Size = new System.Drawing.Size(349, 31);
@@ -471,7 +339,7 @@
             this.contactValue.Enabled = false;
             this.contactValue.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.contactValue.ForeColor = System.Drawing.Color.Black;
-            this.contactValue.Location = new System.Drawing.Point(189, 194);
+            this.contactValue.Location = new System.Drawing.Point(189, 200);
             this.contactValue.Margin = new System.Windows.Forms.Padding(8);
             this.contactValue.Name = "contactValue";
             this.contactValue.Size = new System.Drawing.Size(349, 31);
@@ -486,7 +354,7 @@
             this.LnameTitleTxt.Enabled = false;
             this.LnameTitleTxt.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.LnameTitleTxt.ForeColor = System.Drawing.Color.Black;
-            this.LnameTitleTxt.Location = new System.Drawing.Point(22, 147);
+            this.LnameTitleTxt.Location = new System.Drawing.Point(22, 151);
             this.LnameTitleTxt.Margin = new System.Windows.Forms.Padding(8);
             this.LnameTitleTxt.Name = "LnameTitleTxt";
             this.LnameTitleTxt.Size = new System.Drawing.Size(142, 31);
@@ -501,7 +369,7 @@
             this.emailValue.Enabled = false;
             this.emailValue.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.emailValue.ForeColor = System.Drawing.Color.Black;
-            this.emailValue.Location = new System.Drawing.Point(189, 241);
+            this.emailValue.Location = new System.Drawing.Point(189, 249);
             this.emailValue.Margin = new System.Windows.Forms.Padding(8);
             this.emailValue.Name = "emailValue";
             this.emailValue.Size = new System.Drawing.Size(349, 31);
@@ -516,13 +384,41 @@
             this.lnameValue.Enabled = false;
             this.lnameValue.Font = new System.Drawing.Font("Cambria", 11.8F);
             this.lnameValue.ForeColor = System.Drawing.Color.Black;
-            this.lnameValue.Location = new System.Drawing.Point(189, 147);
+            this.lnameValue.Location = new System.Drawing.Point(189, 151);
             this.lnameValue.Margin = new System.Windows.Forms.Padding(8);
             this.lnameValue.Name = "lnameValue";
             this.lnameValue.Size = new System.Drawing.Size(349, 31);
             this.lnameValue.TabIndex = 87;
             this.lnameValue.Text = "(Last Name)";
             this.lnameValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // AccCredentialPanel
+            // 
+            this.AccCredentialPanel.Controls.Add(this.ShowHide);
+            this.AccCredentialPanel.Controls.Add(this.deptValue);
+            this.AccCredentialPanel.Controls.Add(this.DeptTItleTxt);
+            this.AccCredentialPanel.Controls.Add(this.ACTitleLbl);
+            this.AccCredentialPanel.Controls.Add(this.PwordValue);
+            this.AccCredentialPanel.Controls.Add(this.UnameValue);
+            this.AccCredentialPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AccCredentialPanel.Location = new System.Drawing.Point(15, 331);
+            this.AccCredentialPanel.Name = "AccCredentialPanel";
+            this.AccCredentialPanel.Size = new System.Drawing.Size(555, 230);
+            this.AccCredentialPanel.TabIndex = 78;
+            this.AccCredentialPanel.Visible = false;
+            // 
+            // ShowHide
+            // 
+            this.ShowHide.AutoSize = true;
+            this.ShowHide.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowHide.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ShowHide.Location = new System.Drawing.Point(278, 166);
+            this.ShowHide.Name = "ShowHide";
+            this.ShowHide.Size = new System.Drawing.Size(76, 26);
+            this.ShowHide.TabIndex = 98;
+            this.ShowHide.Text = "Show";
+            this.ShowHide.UseVisualStyleBackColor = true;
+            this.ShowHide.CheckedChanged += new System.EventHandler(this.ShowHideChkbx_CheckedChanged);
             // 
             // deptValue
             // 
@@ -553,14 +449,62 @@
             this.DeptTItleTxt.Text = "(Department)";
             this.DeptTItleTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // ACTitleLbl
+            // 
+            this.ACTitleLbl.AutoSize = true;
+            this.ACTitleLbl.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ACTitleLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ACTitleLbl.Location = new System.Drawing.Point(162, 60);
+            this.ACTitleLbl.Name = "ACTitleLbl";
+            this.ACTitleLbl.Size = new System.Drawing.Size(222, 28);
+            this.ACTitleLbl.TabIndex = 90;
+            this.ACTitleLbl.Text = "Account Credential";
+            // 
+            // PwordValue
+            // 
+            this.PwordValue.BackColor = System.Drawing.Color.Gainsboro;
+            this.PwordValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PwordValue.Font = new System.Drawing.Font("Cambria", 11.8F);
+            this.PwordValue.ForeColor = System.Drawing.Color.Black;
+            this.PwordValue.Location = new System.Drawing.Point(278, 124);
+            this.PwordValue.Margin = new System.Windows.Forms.Padding(8);
+            this.PwordValue.Name = "PwordValue";
+            this.PwordValue.Size = new System.Drawing.Size(250, 31);
+            this.PwordValue.TabIndex = 89;
+            this.PwordValue.Text = "(Password)";
+            this.PwordValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PwordValue.Click += new System.EventHandler(this.PasswordChoose);
+            // 
+            // UnameValue
+            // 
+            this.UnameValue.BackColor = System.Drawing.Color.Gainsboro;
+            this.UnameValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UnameValue.Font = new System.Drawing.Font("Cambria", 11.8F);
+            this.UnameValue.ForeColor = System.Drawing.Color.Black;
+            this.UnameValue.Location = new System.Drawing.Point(12, 124);
+            this.UnameValue.Margin = new System.Windows.Forms.Padding(8);
+            this.UnameValue.Name = "UnameValue";
+            this.UnameValue.Size = new System.Drawing.Size(250, 31);
+            this.UnameValue.TabIndex = 88;
+            this.UnameValue.Text = "(Username)";
+            this.UnameValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // PathHolder
+            // 
+            this.PathHolder.Location = new System.Drawing.Point(15, 172);
+            this.PathHolder.Name = "PathHolder";
+            this.PathHolder.Size = new System.Drawing.Size(193, 22);
+            this.PathHolder.TabIndex = 61;
+            this.PathHolder.Visible = false;
+            // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(816, 593);
+            this.ClientSize = new System.Drawing.Size(815, 627);
             this.Controls.Add(this.MainInfoPanel);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.SideControlPanel);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -570,14 +514,14 @@
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.SideControlPanel.ResumeLayout(false);
+            this.SideControlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
             this.MainInfoPanel.ResumeLayout(false);
-            this.AccCredentialPanel.ResumeLayout(false);
-            this.AccCredentialPanel.PerformLayout();
             this.PersonalInfoPanel.ResumeLayout(false);
             this.PersonalInfoPanel.PerformLayout();
+            this.AccCredentialPanel.ResumeLayout(false);
+            this.AccCredentialPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -588,9 +532,8 @@
         private System.Windows.Forms.Label CloseLbl;
         private System.Windows.Forms.Label SumOfAtndLBL;
         private System.Windows.Forms.PictureBox profilepic;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel SideControlPanel;
         private System.Windows.Forms.TextBox AccountNoValue;
-        private System.Windows.Forms.TextBox DateValue;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button CreateBtn;
         private System.Windows.Forms.ComboBox AccTypeValue;
@@ -599,13 +542,9 @@
         private System.Windows.Forms.Label PInfoTitleLbl;
         private System.Windows.Forms.TextBox EmailTitleTxt;
         private System.Windows.Forms.TextBox MnameTItleTxt;
-        private System.Windows.Forms.TextBox bdateValue;
         private System.Windows.Forms.TextBox ContactTitleTxt;
-        private System.Windows.Forms.TextBox BDateTitleTxt;
         private System.Windows.Forms.TextBox fnameTitleTxt;
-        private System.Windows.Forms.TextBox addressValue;
         private System.Windows.Forms.TextBox fnameValue;
-        private System.Windows.Forms.TextBox AddressTitleTxt;
         private System.Windows.Forms.TextBox mnameValue;
         private System.Windows.Forms.TextBox contactValue;
         private System.Windows.Forms.TextBox LnameTitleTxt;
@@ -617,5 +556,7 @@
         private System.Windows.Forms.Label ACTitleLbl;
         private System.Windows.Forms.TextBox PwordValue;
         private System.Windows.Forms.TextBox UnameValue;
+        private System.Windows.Forms.CheckBox ShowHide;
+        private System.Windows.Forms.TextBox PathHolder;
     }
 }

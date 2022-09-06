@@ -20,9 +20,7 @@ namespace Comprog2Project
         }
 
         //corousel hover collection of image path
-        private readonly Bitmap[] bitmaps = { Resources._587597, Resources._596398, Resources._596859, 
-                                              Resources._629544, Resources._727980, Resources._784987, 
-                                              Resources._849843, Resources._910148 };
+        private readonly Bitmap[] bitmaps = {Resources.bg_2,Resources.bg_3,Resources.bg_4,Resources.bg_5 };
         private int length = 0;
         //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -64,19 +62,79 @@ namespace Comprog2Project
 
             Thread thread = new Thread(ThreaStart => Application.Run(new StartForm()));
             thread.Start();
-            Thread.Sleep(8000);
+            Thread.Sleep(5000);
             thread.Abort();
 
         }
-       //------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------
+
+        public void RunDashboard() {
+
+            var thread = new Thread(ThreadStart => Application.Run(new Dashboard()));
+            thread.Start();
+            this.Close();
+
+        }
+
         //validate the login credential 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (UsernameValue.Text == "admin" && PasswordValue.Text == "admin") {
+           
+            if (string.IsNullOrEmpty(UsernameValue.Text) && string.IsNullOrEmpty(PasswordValue.Text))
+                MessageBox.Show("Empty value");
+            else
+            {
 
-                Thread thread = new Thread(ThreadStart => Application.Run(new Dashboard()));
-                thread.Start();
-                this.Close();
+                try
+                {
+                    if (accType.SelectedItem.ToString() == "Teacher")
+                    {
+
+                        bool isCorrectEnterTeacher = (ConnectionDb.getCompareValue("username", "pword", "_TEACHER", UsernameValue.Text, PasswordValue.Text));
+                        if (isCorrectEnterTeacher)
+                        {
+
+                            ChangePropertyValue.VisibleControl = false;
+                            ChangePropertyValue.accountType = "_TEACHER";
+                            RunDashboard();
+                        }
+                        else
+                        {
+
+
+                            MessageBox.Show("Wrong username or password");
+
+                        }
+                    }
+
+                    if (accType.SelectedItem.ToString() == "Admin")
+                    {
+                        bool isCorrectEnterAdmin = (ConnectionDb.getCompareValue("username", "pword", "ADMIN", UsernameValue.Text, PasswordValue.Text));
+                        if (isCorrectEnterAdmin)
+                        {
+
+                            ChangePropertyValue.VisibleControl = true;
+                            ChangePropertyValue.accountType = "ADMIN";
+                            RunDashboard();
+
+                        }
+                        else
+                        {
+
+
+                            MessageBox.Show("Wrong username or password");
+
+                        }
+                    }
+
+
+                }
+                catch {
+
+                    MessageBox.Show("Not A Account Type");
+                
+                }
+
             }
         }
       //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -104,6 +162,7 @@ namespace Comprog2Project
             temp.UseSystemPasswordChar = true;
             temp.Clear();
         }
-    //--------------------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------------------------
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comprog2Project
 {
-     internal interface IAccount
+     public interface IAccount
     {
         string FirstName { get; set; }
         string LastName { get; set; }
@@ -14,5 +14,6 @@ namespace Comprog2Project
         string FullName { get; }
         string Email { get; set; }
         string Contact { get; set; }
+        string ProfilePic { get; set; }
     }
 }

@@ -23,29 +23,29 @@ namespace Comprog2Project
 
         private void SelectSection(object sender, EventArgs e)
         {
-            ConnectionDb.QueryCommand = "SELECT class_section FROM Classroom";
-            List<object> list = new List<object>();
-            //this will use those things to connect database then close and dispose the resources
-            using (ConnectionDb.Connection = new SqlConnection(ConnectionString.ConnectionStrings))
-            using (ConnectionDb.Command = new SqlCommand(ConnectionDb.QueryCommand, ConnectionDb.Connection))
-            using (ConnectionDb.Adapter = new SqlDataAdapter(ConnectionDb.Command))
-            {
+            //ConnectionDb.QueryCommand = "SELECT class_section FROM Classroom";
+            //List<object> list = new List<object>();
+            ////this will use those things to connect database then close and dispose the resources
+            //using (ConnectionDb.Connection = new SqlConnection(ConnectionString.ConnectionStrings))
+            //using (ConnectionDb.Command = new SqlCommand(ConnectionDb.QueryCommand, ConnectionDb.Connection))
+            //using (ConnectionDb.Adapter = new SqlDataAdapter(ConnectionDb.Command))
+            //{
 
-                ConnectionDb.Command.CommandType = CommandType.Text;                    //determine the type of command that will execute
-                ConnectionDb.Adapter.Fill(ConnectionDb.dataSet, "Classroom");           //fill the data in the dataset
+            //    ConnectionDb.Command.CommandType = CommandType.Text;                    //determine the type of command that will execute
+            //    ConnectionDb.Adapter.Fill(ConnectionDb.dataSet, "Classroom");           //fill the data in the dataset
 
-                for (int x = 0; x < ConnectionDb.dataSet.Tables[0].Rows.Count; x++)      //search the whole value in the system
-                {
-                    if (!SectionCodeCmb.Items.Contains(ConnectionDb.dataSet.Tables[0].Rows[x][0]))
-                    {
-                        SectionCodeCmb.Items.Add(ConnectionDb.dataSet.Tables[0].Rows[x][0]);   //then put those data in the combobox
-                    }
-                    SectionCodeCmb.Items.RemoveAt(x);
-                    SectionCodeCmb.Items.AddRange(list.ToArray());
+            //    for (int x = 0; x < ConnectionDb.dataSet.Tables[0].Rows.Count; x++)      //search the whole value in the system
+            //    {
+            //        if (!SectionCodeCmb.Items.Contains(ConnectionDb.dataSet.Tables[0].Rows[x][0]))
+            //        {
+            //            SectionCodeCmb.Items.Add(ConnectionDb.dataSet.Tables[0].Rows[x][0]);   //then put those data in the combobox
+            //        }
+            //        SectionCodeCmb.Items.RemoveAt(x);
+            //        SectionCodeCmb.Items.AddRange(list.ToArray());
 
-                }
+            //    }
 
-            }
+            //}
 
 
         }

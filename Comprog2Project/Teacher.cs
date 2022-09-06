@@ -17,22 +17,10 @@ namespace Comprog2Project
         public string FullName { get { return LastName + "," + FirstName + MiddleName[0]; } }
         public string Email { get; set; } = "";
         public string Contact { get; set; } = "";
-
-        public void AddStudent(IStudent student) {
-
-            ConnectionDb.QueryCommand = @"INSERT INTO ClassroomAttendance()VALUES(@studentid,@fname,@mname,@lname,@email,@contact)";
-
-            using (ConnectionDb.Connection = new SqlConnection(ConnectionString.ConnectionStrings))
-            using (ConnectionDb.Command = new SqlCommand(ConnectionDb.QueryCommand, ConnectionDb.Connection))
-            using (ConnectionDb.Adapter = new SqlDataAdapter(ConnectionDb.Command))
-            {
-                ConnectionDb.Command.CommandType = CommandType.Text;                    //determine the type of command that will execute
-               // ConnectionDb.Command.Parameters.AddWithValue("@studentid",StudentID.Text);
-               //ConnectionDb.Command.Parameters.AddWithValue("@fname",FisrtName.Text);
-
-            }
-
-        }
+        public string Password { get ; set; }
+        public string username { get; set ; }
+        public string ProfilePic { get; set; }
+    }
 
     }
-}
+

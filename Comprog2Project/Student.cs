@@ -15,6 +15,7 @@ namespace Comprog2Project
         public string FullName { get { return LastName + "," + FirstName + MiddleName[0]; } }
         public string Email { get; set; } = "";
         public string Contact { get; set; } = "";
+        public string ProfilePic { get; set; }
 
     }
 }

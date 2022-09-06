@@ -63,7 +63,6 @@ namespace Comprog2Project
             List<Control> controls = new List<Control>(new TextBox[]{
 
                 fnameValue,mnameValue,lnameValue,contactValue,emailValue,
-                addressValue,bdateValue
 
             });
 
@@ -71,5 +70,63 @@ namespace Comprog2Project
 
         }
         //-------------------------------------------------------------------------------------------------------------------------------------
+        public void createAccount(object sender, EventArgs e) {
+
+            if (AccTypeValue.SelectedItem.ToString() == "Student")
+                ConnectionDb.EnterStudent(new Student() {
+                    StudenID = AccountNoValue.Text,
+                    FirstName = fnameValue.Text,
+                    MiddleName = mnameValue.Text,
+                    LastName = lnameValue.Text,
+                    Contact = contactValue.Text,
+                    Email = emailValue.Text,
+                    ProfilePic = PathHolder.Text
+
+                }) ;
+
+            if (AccTypeValue.SelectedItem.ToString() == "Teacher") {
+
+                ConnectionDb.EnterTeacher(new Teacher()
+                {
+                    ProfessorID = AccountNoValue.Text,
+                    FirstName = fnameValue.Text,
+                    MiddleName = mnameValue.Text,
+                    LastName = lnameValue.Text,
+                    Contact = contactValue.Text,
+                    Email = emailValue.Text,
+                    ProfilePic = PathHolder.Text,
+                    username = UnameValue.Text,
+                    Password =  PwordValue.Text
+
+                });
+
+            }
+
+        
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------
+        //hide and show text form of the password
+        private void ShowHideChkbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckState.Checked == ShowHide.CheckState)
+            {
+                PwordValue.UseSystemPasswordChar = true;
+                ShowHide.Text = "Show";
+            }
+            else
+            {
+                PwordValue.UseSystemPasswordChar = false;
+                ShowHide.Text = "Hide";
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------
+        private void PasswordChoose(object sender, EventArgs e)
+        {
+            var temp = (TextBox)sender;
+            temp.UseSystemPasswordChar = true;
+            temp.Clear();
+        }
     }
 }

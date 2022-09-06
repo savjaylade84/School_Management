@@ -39,8 +39,6 @@ namespace Comprog2Project
             //check if one of these controls are being hover by the mouse
             if (temp == AbsentPanel || temp == AbsentLabel || temp == AbsentNumLabel)
                 hoverForm.BackColor = System.Drawing.Color.Red;
-            if (temp == PresentPanel || temp == PresentNumLabel || temp == PresentLabel)
-                hoverForm.BackColor = System.Drawing.Color.Lime;
             if (temp == LateComerPanel || temp == LateLabel || temp == LateNumLabel)
                 hoverForm.BackColor = System.Drawing.Color.Orange;
             if (temp == ExcusePanel || temp == ExcuseLabel || temp == ExcuseNumLabel)
@@ -61,20 +59,21 @@ namespace Comprog2Project
 
              
             var pic = (Control)sender;                  // capture the control that trigger this event
-            ChangeColor.BackColor((Control)pic.Parent, System.Drawing.Color.LightGray); //capture the parent control and change the backcolor
+            ChangeColor.BackColor((Control)pic.Parent, System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(155)))), ((int)(((byte)(110)))))); //capture the parent control and change the backcolor
+            // 190, 144, 110
 
         }
         //---------------------------------------------------------------------------------------------------------
         private void NotHoverNavBar(object sender, EventArgs e) {
 
             var pic = (Control)sender;                 //capture the control that trigger this event
-            ChangeColor.BackColor((Control)pic.Parent, System.Drawing.SystemColors.ActiveBorder);   //capture the parent control and change the backcolor
-
+            ChangeColor.BackColor((Control)pic.Parent, System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(144)))), ((int)(((byte)(99))))));   //capture the parent control and change the backcolor
+            //190, 144, 99
 
         }
         //-------------------------------------------------------------------------------------------------------
 
-       //open the searching form
+        //open the searching form
         private void SearchAndFind(object sender, EventArgs e)
         {
             ChangeColor.BackColor(SearchPeoplePanel, System.Drawing.Color.WhiteSmoke);
@@ -104,5 +103,42 @@ namespace Comprog2Project
             createAccount.Show();         //show the form
         }
         //----------------------------------------------------------------------------------------------------
+
+        private void CreateSectionClick(object sender, EventArgs e) {
+
+            ChangeColor.BackColor(AddCRoomPanel, System.Drawing.Color.WhiteSmoke);
+            var createSection = new CreateClassroom();
+            createSection.FormClosed += (x, y) => this.Enabled = true;    //enabled the dashboard form when this form closed
+            this.Enabled = false;        //unable the dashboard when using this form
+            createSection.Show();         //show the form
+
+        }
+         //------------------------------------------------------------------------------------------------------------------
+        private void LoadInfo(object sender, EventArgs e)
+        {
+
+            //pre load some data in the database in the summary
+            ConnectionDb.ViewRecord((ChangePropertyValue.VisibleControl) ? "Report" : "ReportTeacher", SectionSummaryPanel);
+            AbsentNumLabel.Text = ConnectionDb.getCount("absent", "SECTION");
+            LateNumLabel.Text = ConnectionDb.getCount("late", "SECTION");
+            ExcuseNumLabel.Text = ConnectionDb.getCount("excuse", "SECTION");
+
+            //change the visible if the it is a admin
+            AddCRoomPanel.Visible = ChangePropertyValue.VisibleControl;
+            accountType.Text += ChangePropertyValue.accountType;
+
+            if (ChangePropertyValue.accountType == "ADMIN")
+            {
+                ConnectionDb.getValueInAdmin(new TextBox[] {
+
+                profNameValue,ProfContactValue,ProfEmailValue,PathHolder
+
+            }, (ChangePropertyValue.VisibleControl) ? "adminInfo" : "teacherInfo");
+
+                ProfilePic.Image = Image.FromFile(PathHolder.Text);
+            }
+
+
+        }
     }
 }

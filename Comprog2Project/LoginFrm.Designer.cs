@@ -38,6 +38,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.ShowHideChkbx = new System.Windows.Forms.CheckBox();
             this.MainLoginPanel = new System.Windows.Forms.Panel();
+            this.accType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CloseLbl = new System.Windows.Forms.Label();
             this.ImageCorousel = new System.Windows.Forms.Panel();
@@ -57,10 +58,10 @@
             this.UsernameValue.BackColor = System.Drawing.Color.DimGray;
             this.UsernameValue.Font = new System.Drawing.Font("Cambria", 12.2F);
             this.UsernameValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.UsernameValue.Location = new System.Drawing.Point(50, 100);
+            this.UsernameValue.Location = new System.Drawing.Point(46, 100);
             this.UsernameValue.MaxLength = 50;
             this.UsernameValue.Name = "UsernameValue";
-            this.UsernameValue.Size = new System.Drawing.Size(314, 31);
+            this.UsernameValue.Size = new System.Drawing.Size(318, 31);
             this.UsernameValue.TabIndex = 2;
             this.UsernameValue.Text = "Username";
             // 
@@ -69,10 +70,10 @@
             this.PasswordValue.BackColor = System.Drawing.Color.DimGray;
             this.PasswordValue.Font = new System.Drawing.Font("Cambria", 12.2F);
             this.PasswordValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.PasswordValue.Location = new System.Drawing.Point(50, 165);
+            this.PasswordValue.Location = new System.Drawing.Point(46, 165);
             this.PasswordValue.MaxLength = 50;
             this.PasswordValue.Name = "PasswordValue";
-            this.PasswordValue.Size = new System.Drawing.Size(314, 31);
+            this.PasswordValue.Size = new System.Drawing.Size(318, 31);
             this.PasswordValue.TabIndex = 3;
             this.PasswordValue.Text = "Password";
             this.PasswordValue.Click += new System.EventHandler(this.PasswordChoose);
@@ -93,7 +94,7 @@
             this.LoginBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.Location = new System.Drawing.Point(46, 255);
+            this.LoginBtn.Location = new System.Drawing.Point(46, 273);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(318, 43);
             this.LoginBtn.TabIndex = 5;
@@ -108,7 +109,7 @@
             this.CancelBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelBtn.Location = new System.Drawing.Point(46, 317);
+            this.CancelBtn.Location = new System.Drawing.Point(46, 335);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(318, 43);
             this.CancelBtn.TabIndex = 6;
@@ -140,8 +141,9 @@
             // 
             // MainLoginPanel
             // 
-            this.MainLoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
+            this.MainLoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.MainLoginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MainLoginPanel.Controls.Add(this.accType);
             this.MainLoginPanel.Controls.Add(this.ShowHideChkbx);
             this.MainLoginPanel.Controls.Add(this.linkLabel1);
             this.MainLoginPanel.Controls.Add(this.CancelBtn);
@@ -155,6 +157,21 @@
             this.MainLoginPanel.Padding = new System.Windows.Forms.Padding(15);
             this.MainLoginPanel.Size = new System.Drawing.Size(423, 449);
             this.MainLoginPanel.TabIndex = 0;
+            // 
+            // accType
+            // 
+            this.accType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
+            this.accType.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.accType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.accType.FormattingEnabled = true;
+            this.accType.Items.AddRange(new object[] {
+            "Teacher",
+            "Admin"});
+            this.accType.Location = new System.Drawing.Point(46, 228);
+            this.accType.Name = "accType";
+            this.accType.Size = new System.Drawing.Size(318, 28);
+            this.accType.TabIndex = 9;
+            this.accType.Text = "(Account Type)";
             // 
             // panel1
             // 
@@ -185,7 +202,7 @@
             // 
             // ImageCorousel
             // 
-            this.ImageCorousel.BackgroundImage = global::Comprog2Project.Properties.Resources._545916;
+            this.ImageCorousel.BackgroundImage = global::Comprog2Project.Properties.Resources.bg_1;
             this.ImageCorousel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ImageCorousel.Controls.Add(this.panel1);
             this.ImageCorousel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,5 +249,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label CloseLbl;
         private System.Windows.Forms.Panel ImageCorousel;
+        private System.Windows.Forms.ComboBox accType;
     }
 }
